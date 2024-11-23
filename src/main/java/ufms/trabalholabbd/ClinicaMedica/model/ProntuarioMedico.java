@@ -1,73 +1,63 @@
-
-package ufms.trabalholabbd.clinica_medica.model;
+package ufms.trabalholabbd.ClinicaMedica.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.util.List;
-import java.time.LocalDateTime;
+
 
 @Entity
-@Table(name = "consultas")
-public class ConsultaMedica {
+@Table
+public class ProntuarioMedico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime dateTime;
+    private String diagnostico;
+    private String prescricao;
 
-    @ManyToOne
-    @JoinColumn(name = "medico_id")
-    private Medico medico;
-
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "paciente_id")
     private Paciente paciente;
 
-    public ConsultaMedica() {
-    }
+    //construtor vazio para o
+    public ProntuarioMedico() {}
 
-    public ConsultaMedica(LocalDateTime dateTime, Medico medico, Paciente paciente) {
-        this.dateTime = dateTime;
-        this.medico = medico;
+    public ProntuarioMedico(Long id, String diagnostico, String prescricao, Paciente paciente) {
+        this.id = id;
+        this.diagnostico = diagnostico;
+        this.prescricao = prescricao;
         this.paciente = paciente;
     }
-
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public String getDiagnostico() {
+        return diagnostico;
     }
-
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
     }
-
-    public Medico getMedico() {
-        return medico;
+    public String getPrescricao() {
+        return prescricao;
     }
-
-    public void setMedico(Medico medico) {
-        this.medico = medico;
+    public void setPrescricao(String prescricao) {
+        this.prescricao = prescricao;
     }
-
     public Paciente getPaciente() {
         return paciente;
     }
-
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
+
 }

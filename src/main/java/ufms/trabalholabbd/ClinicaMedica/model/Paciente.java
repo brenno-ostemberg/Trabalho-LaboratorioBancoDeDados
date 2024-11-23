@@ -1,4 +1,4 @@
-package ufms.trabalholabbd.clinica_medica.model;
+package ufms.trabalholabbd.ClinicaMedica.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
