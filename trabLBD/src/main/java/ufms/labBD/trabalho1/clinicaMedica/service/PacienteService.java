@@ -1,7 +1,7 @@
 package ufms.labBD.trabalho1.clinicaMedica.service;
 
-import ufms.trabalholabbd.ClinicaMedica.model.Paciente;
-import ufms.trabalholabbd.ClinicaMedica.repository.PacienteRepository;
+import ufms.labBD.trabalho1.clinicaMedica.model.Paciente;
+import ufms.labBD.trabalho1.clinicaMedica.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

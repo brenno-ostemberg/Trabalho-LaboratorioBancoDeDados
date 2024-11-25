@@ -1,4 +1,4 @@
-package ufms.labBD.trabalho1.clinicaMedica.model;C
+package ufms.labBD.trabalho1.clinicaMedica.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -21,7 +21,7 @@ public class Medico {
     private String especialidade;
 
     //um médico pode ter n consultas
-    @OneToMany(mappedBy = "medicos", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "medico")
     private List<ConsultaMedica> consultaMedica;
 
     public Medico() {
