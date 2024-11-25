@@ -1,4 +1,4 @@
-package ufms.trabalholabbd.ClinicaMedica.controller;
+package ufms.labBD.trabalho1.clinicaMedica.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ufms.labBD.trabalho1.clinicaMedica.model.Paciente;
 import ufms.labBD.trabalho1.clinicaMedica.service.PacienteService;
+
 
 import java.util.List;
 import java.util.Optional;
