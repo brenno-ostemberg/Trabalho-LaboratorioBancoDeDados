@@ -1,4 +1,4 @@
-package ufms.trablbd;
+package ufms.labBD.trabalho1.clinicaMedica;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
